@@ -1,18 +1,18 @@
 import { AppBar, Button, Container, Grid, IconButton, Paper, Toolbar, Typography } from '@material-ui/core';
 import { Menu } from '@material-ui/icons';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { v1 } from 'uuid';
 import './App.css';
 import { AddItemForm } from './Todolist/AddItemForm/AddItemForm';
 import TodoList, { TaskType } from './Todolist/Todolist';
 
 export type FilterValuesType = 'all' | 'active' | 'completed';
-type TodolistType = {
+export type TodolistType = {
     id: string
     title: string
     filter: FilterValuesType
 }
-type TasksStateType = {
+export type TasksStateType = {
     [key: string]: TaskType[]
 }
 
@@ -40,6 +40,21 @@ const App = () => {
             { id: v1(), title: 'React JS', isDone: false },
         ],
     })
+
+    /* useEffect(() => {
+        const todolists = localStorage.getItem('todolists');
+        if (todolists) {
+            const newTodolists = JSON.parse(todolists)
+            setTodolists(() => newTodolists);
+            console.log(todolists);
+        }
+    }, [])
+
+
+    useEffect(() => {
+        localStorage.setItem('todolists', JSON.stringify(todolists))
+    }, [todolists]) */
+
 
 
     function removeTasks(id: string, todolistID: string) { // yes
