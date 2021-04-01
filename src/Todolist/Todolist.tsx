@@ -56,7 +56,7 @@ function TodoList(props: TodolistPropsType) {
 	const onActiveClickHandler = () => props.changeFilter('active', props.id);
 	const onCompletedClickHandler = () => props.changeFilter('completed', props.id);
 	const changeTodoListTitle = (title: string) => props.changeTodoListTitle(title, props.id);
-	console.log(props.title)
+
 	return (
 		<div>
 			<h3>

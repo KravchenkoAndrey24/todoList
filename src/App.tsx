@@ -41,19 +41,6 @@ const App = () => {
         ],
     })
 
-    /* useEffect(() => {
-        const todolists = localStorage.getItem('todolists');
-        if (todolists) {
-            const newTodolists = JSON.parse(todolists)
-            setTodolists(() => newTodolists);
-            console.log(todolists);
-        }
-    }, [])
-
-
-    useEffect(() => {
-        localStorage.setItem('todolists', JSON.stringify(todolists))
-    }, [todolists]) */
 
 
 
