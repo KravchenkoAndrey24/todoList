@@ -7,7 +7,9 @@ type EditableSpanPropsType = {
 	changeTaskTitle: (newTitle: string) => void
 }
 
-export function EditableSpan(props: EditableSpanPropsType) {
+export const EditableSpan = React.memo(function (props: EditableSpanPropsType) {
+	console.log('EditableSpan called');
+
 
 	let [title, setTitle] = useState(props.title);
 	let [editMode, setEditMode] = useState<boolean>(false);
@@ -40,4 +42,4 @@ export function EditableSpan(props: EditableSpanPropsType) {
 
 	)
 }
-
+)

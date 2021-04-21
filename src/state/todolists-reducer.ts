@@ -67,3 +67,4 @@ export const ChangeTodolistTitleAC = (newTitle: string, todoListId: string) => {
 export const ChangeTodolistFilterAC = (value: FilterValuesType, todolistID: string) => {
 	return { type: CHANGE_TODOLIST_FILTER, value, todolistID } as const;
 }
+
