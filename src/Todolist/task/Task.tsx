@@ -4,7 +4,7 @@ import React, { ChangeEvent, useCallback } from 'react';
 import { EditableSpan } from '../EditableSpan';
 import { TaskType } from '../Todolist';
 
-type TaskPropsType = {
+export type TaskPropsType = {
 	task: TaskType
 	todolistId: string
 	changeTaskStatus: (id: string, newIsDoneValue: boolean, todolistId: string) => void
