@@ -1,7 +1,6 @@
 import React from 'react';
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
-// @ts-ignore
-import { Story, Meta } from "@storybook/react";
+import { Story, Meta } from '@storybook/react';
 
 import { Button, ButtonProps } from './Button';
 
@@ -12,7 +11,7 @@ export default {
     backgroundColor: { control: 'color' },
   },
 } as Meta;
-// @ts-ignore
+
 const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});

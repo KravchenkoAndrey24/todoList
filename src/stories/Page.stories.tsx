@@ -1,6 +1,5 @@
 import React from 'react';
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
-// @ts-ignore
 import { Story, Meta } from '@storybook/react';
 
 import { Page, PageProps } from './Page';
@@ -10,7 +9,7 @@ export default {
   title: 'Example/Page',
   component: Page,
 } as Meta;
-// @ts-ignore
+
 const Template: Story<PageProps> = (args) => <Page {...args} />;
 
 export const LoggedIn = Template.bind({});
