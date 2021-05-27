@@ -26,7 +26,6 @@ export const loginTC = (data: LoginParamsType) => (dispatch: Dispatch<ActionsTyp
 		.then(res => {
 			if (res.data.resultCode === 0) {
 				dispatch(setIsLoggedInAC(true))
-				debugger
 				dispatch(setAppStatusAC('succeeded'))
 			} else {
 				handleServerAppError(res.data, dispatch);
